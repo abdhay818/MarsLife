@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     
-<!-- Licensed to naveeninja/dark_2/ by Themeforest/3.x [XR&CO'2013], Sat, 23 Apr 2016 11:52:21 GMT -->
+<!-- Licensed to naveeninja/dark_2/form-wizard.html by Themeforest/3.x [XR&CO'2013], Sat, 23 Apr 2016 11:54:35 GMT -->
 <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -10,11 +10,12 @@
 
         <link rel="shortcut icon" href="assets/images/favicon_1.ico">
 
-        <title>MarsLife</title>
+        <title>Moltran - Responsive Admin Dashboard Template</title>
+        
+        <!--Form Wizard-->
+        <link rel="stylesheet" type="text/css" href="assets/plugins/jquery.steps/demo/css/jquery.steps.css">
 
-        <link href="assets/plugins/sweetalert/dist/sweetalert.css" rel="stylesheet" type="text/css">
-
-        <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+       <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
         <link href="assets/css/core.css" rel="stylesheet" type="text/css">
         <link href="assets/css/icons.css" rel="stylesheet" type="text/css">
         <link href="assets/css/components.css" rel="stylesheet" type="text/css">
@@ -55,7 +56,7 @@
                 <!-- LOGO -->
                 <div class="topbar-left">
                     <div class="text-center">
-                        <a href="index-2.html" class="logo"><i class="md md-terrain"></i> <span>MarsLife </span></a>
+                        <a href="index-2.html" class="logo"><i class="md md-terrain"></i> <span>Moltran </span></a>
                     </div>
                 </div>
                 <!-- Button mobile view to collapse sidebar menu -->
@@ -77,7 +78,7 @@
 
                             <ul class="nav navbar-nav navbar-right pull-right">
                                 <li class="dropdown hidden-xs">
-                                    <a href="#" data-target="#" class="dropdown-toggle waves-effect waves-light" data-toggle="dropdown" aria-expanded="true">
+                                    <a href="#" data-target="#" class="dropdown-toggle waves-effect" data-toggle="dropdown" aria-expanded="true">
                                         <i class="md md-notifications"></i> <span class="badge badge-xs badge-danger">3</span>
                                     </a>
                                     <ul class="dropdown-menu dropdown-menu-lg">
@@ -134,10 +135,10 @@
                                     </ul>
                                 </li>
                                 <li class="hidden-xs">
-                                    <a href="#" id="btn-fullscreen" class="waves-effect waves-light"><i class="md md-crop-free"></i></a>
+                                    <a href="#" id="btn-fullscreen" class="waves-effect"><i class="md md-crop-free"></i></a>
                                 </li>
                                 <li class="hidden-xs">
-                                    <a href="#" class="right-bar-toggle waves-effect waves-light"><i class="md md-chat"></i></a>
+                                    <a href="#" class="right-bar-toggle waves-effect"><i class="md md-chat"></i></a>
                                 </li>
                                 <li class="dropdown">
                                     <a href="#" class="dropdown-toggle profile" data-toggle="dropdown" aria-expanded="true"><img src="assets/images/users/avatar-1.jpg" alt="user-img" class="img-circle"> </a>
@@ -183,7 +184,7 @@
                     <div id="sidebar-menu">
                         <ul>
                             <li>
-                                <a href="index-2.html" class="waves-effect active"><i class="md md-home"></i><span> Dashboard </span></a>
+                                <a href="index-2.html" class="waves-effect"><i class="md md-home"></i><span> Dashboard </span></a>
                             </li>
 
                             <li class="has_sub">
@@ -236,14 +237,14 @@
                                     <li><a href="font-awesome.html">Font awesome</a></li>
                                 </ul>
                             </li>
-                            
+
                             <li class="has_sub">
-                                <a href="#" class="waves-effect"><i class="md md-now-widgets"></i><span> Forms </span><span class="pull-right"><i class="md md-add"></i></span></a>
+                                <a href="#" class="waves-effect active"><i class="md md-now-widgets"></i><span> Forms </span><span class="pull-right"><i class="md md-add"></i></span></a>
                                 <ul class="list-unstyled">
                                     <li><a href="form-elements.html">General Elements</a></li>
                                     <li><a href="form-validation.html">Form Validation</a></li>
                                     <li><a href="form-advanced.html">Advanced Form</a></li>
-                                    <li><a href="form-wizard.html">Form Wizard</a></li>
+                                    <li class="active"><a href="form-wizard.html">Form Wizard</a></li>
                                     <li><a href="form-editor.html">WYSIWYG Editor</a></li>
                                     <li><a href="code-editor.html">Code Editors</a></li>
                                     <li><a href="form-uploads.html">Multiple File Upload</a></li>
@@ -340,332 +341,335 @@
                         <!-- Page-Title -->
                         <div class="row">
                             <div class="col-sm-12">
-                                <h4 class="pull-left page-title">Welcome !</h4>
+                                <h4 class="pull-left page-title">Form Wizard</h4>
                                 <ol class="breadcrumb pull-right">
                                     <li><a href="#">Moltran</a></li>
-                                    <li class="active">Dashboard</li>
+                                    <li><a href="#">Forms</a></li>
+                                    <li class="active">Form Wizard</li>
                                 </ol>
                             </div>
                         </div>
 
-                        <!-- Start Widget -->
-
-
-
+                        <!-- Basic Form Wizard -->
                         <div class="row">
-                            <div class="col-lg-8">
-                                <div class="portlet"><!-- /portlet heading -->
-                                    <div class="portlet-heading">
-                                        <h3 class="portlet-title text-dark text-uppercase">
-                                            Website Stats
-                                        </h3>
-                                        <div class="portlet-widgets">
-                                            <a href="javascript:;" data-toggle="reload"><i class="ion-refresh"></i></a>
-                                            <span class="divider"></span>
-                                            <a data-toggle="collapse" data-parent="#accordion1" href="#portlet1"><i class="ion-minus-round"></i></a>
-                                            <span class="divider"></span>
-                                            <a href="#" data-toggle="remove"><i class="ion-close-round"></i></a>
-                                        </div>
-                                        <div class="clearfix"></div>
-                                    </div>
-                                    <div id="portlet1" class="panel-collapse collapse in">
-                                        <div class="portlet-body">
-                                            <div class="row">
-                                                <div class="col-md-12">
-                                                    <div id="website-stats" style="position: relative;height: 320px"></div>
-                                                    <div class="row text-center m-t-30">
-                                                        <div class="col-sm-4">
-                                                            <h4 class="counter">86,956</h4>
-                                                            <small class="text-muted"> Weekly Report</small>
-                                                        </div>
-                                                        <div class="col-sm-4">
-                                                            <h4 class="counter">86,69</h4>
-                                                            <small class="text-muted">Monthly Report</small>
-                                                        </div>
-                                                        <div class="col-sm-4">
-                                                            <h4 class="counter">948,16</h4>
-                                                            <small class="text-muted">Yearly Report</small>
+                            <div class="col-md-12">
+
+                                <div class="panel panel-default">
+                                    <div class="panel-heading"> 
+                                        <h3 class="panel-title">Basic Form Wizard</h3> 
+                                    </div> 
+                                    <div class="panel-body"> 
+                                        <form id="basic-form" action="#">
+                                            <div>
+                                                <h3>Account</h3>
+                                                <section>
+                                                    <div class="form-group clearfix">
+                                                        <label class="col-lg-2 control-label" for="userName">User name *</label>
+                                                        <div class="col-lg-10">
+                                                            <input class="form-control required" id="userName" name="userName" type="text">
                                                         </div>
                                                     </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div> <!-- /Portlet -->
-                            </div> <!-- end col -->
+                                                    <div class="form-group clearfix">
+                                                        <label class="col-lg-2 control-label" for="password"> Password *</label>
+                                                        <div class="col-lg-10">
+                                                            <input id="password" name="password" type="text" class="required form-control">
 
-                            <div class="col-lg-4">
-                                <div class="portlet"><!-- /portlet heading -->
-                                    <div class="portlet-heading">
-                                        <h3 class="portlet-title text-dark text-uppercase">
-                                            Website Stats
-                                        </h3>
-                                        <div class="portlet-widgets">
-                                            <a href="javascript:;" data-toggle="reload"><i class="ion-refresh"></i></a>
-                                            <span class="divider"></span>
-                                            <a data-toggle="collapse" data-parent="#accordion1" href="#portlet2"><i class="ion-minus-round"></i></a>
-                                            <span class="divider"></span>
-                                            <a href="#" data-toggle="remove"><i class="ion-close-round"></i></a>
-                                        </div>
-                                        <div class="clearfix"></div>
-                                    </div>
-                                    <div id="portlet2" class="panel-collapse collapse in">
-                                        <div class="portlet-body">
-                                            <div class="row">
-                                                <div class="col-md-12">
-                                                    <div id="pie-chart">
-                                                        <div id="pie-chart-container" class="flot-chart" style="height: 320px">
                                                         </div>
                                                     </div>
 
-                                                    <div class="row text-center m-t-30">
-                                                        <div class="col-sm-6">
-                                                            <h4 class="counter">86,956</h4>
-                                                            <small class="text-muted"> Weekly Report</small>
-                                                        </div>
-                                                        <div class="col-sm-6">
-                                                            <h4 class="counter">86,69</h4>
-                                                            <small class="text-muted">Monthly Report</small>
+                                                    <div class="form-group clearfix">
+                                                        <label class="col-lg-2 control-label" for="confirm">Confirm Password *</label>
+                                                        <div class="col-lg-10">
+                                                            <input id="confirm" name="confirm" type="text" class="required form-control">
                                                         </div>
                                                     </div>
-                                                </div>
+                                                    <div class="form-group clearfix">
+                                                        <label class="col-lg-12 control-label">(*) Mandatory</label>
+                                                    </div>
+                                                </section>
+                                                <h3>Profile</h3>
+                                                <section>
+                                                    <div class="form-group clearfix">
+
+                                                        <label class="col-lg-2 control-label" for="name"> First name *</label>
+                                                        <div class="col-lg-10">
+                                                            <input id="name" name="name" type="text" class="required form-control">
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group clearfix">
+                                                        <label class="col-lg-2 control-label" for="surname"> Last name *</label>
+                                                        <div class="col-lg-10">
+                                                            <input id="surname" name="surname" type="text" class="required form-control">
+
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="form-group clearfix">
+                                                        <label class="col-lg-2 control-label" for="email">Email *</label>
+                                                        <div class="col-lg-10">
+                                                            <input id="email" name="email" type="text" class="required email form-control">
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="form-group clearfix">
+                                                        <label class="col-lg-2 control-label" for="address">Address *</label>
+                                                        <div class="col-lg-10">
+                                                            <input id="address" name="address" type="text" class="form-control">
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="form-group clearfix">
+                                                        <label class="col-lg-12 control-label">(*) Mandatory</label>
+                                                    </div>
+
+                                                </section>
+                                                <h3>Hints</h3>
+                                                <section>
+                                                    <div class="form-group clearfix">
+                                                        <div class="col-lg-12">
+                                                            <ul>
+                                                                <li>Jonathan Smith </li>
+                                                                <li>Lab</li>
+                                                                <li>jonathan@smith.com</li>
+                                                                <li>Your city, Cityname</li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </section>
+                                                <h3>Finish</h3>
+                                                <section>
+                                                    <div class="form-group clearfix">
+                                                        <div class="col-lg-12">
+                                                            <div class="checkbox checkbox-primary">
+                                                                <input id="checkbox-h" type="checkbox">
+                                                                <label for="checkbox-h">
+                                                                    I agree with the Terms and Conditions.
+                                                                </label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </section>
                                             </div>
-                                        </div>
-                                    </div>
-                                </div> <!-- /Portlet -->
+                                        </form> 
+                                    </div>  <!-- End panel-body -->
+                                </div> <!-- End panel -->
+
                             </div> <!-- end col -->
+
                         </div> <!-- End row -->
 
 
-                        <div class="row">
-                            <div class="col-md-6 col-sm-6 col-lg-3">
-                                <div class="mini-stat clearfix bx-shadow bg-white">
-                                    <span class="mini-stat-icon bg-info"><i class="fa fa-usd"></i></span>
-                                    <div class="mini-stat-info text-right text-dark">
-                                        <span class="counter text-dark">15852</span>
-                                        Total Sales
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-6 col-sm-6 col-lg-3">
-                                <div class="mini-stat clearfix bx-shadow bg-white">
-                                    <span class="mini-stat-icon bg-warning"><i class="fa fa-shopping-cart"></i></span>
-                                    <div class="mini-stat-info text-right text-dark">
-                                        <span class="counter text-dark">956</span>
-                                        New Orders
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-6 col-sm-6 col-lg-3">
-                                <div class="mini-stat clearfix bx-shadow bg-white">
-                                    <span class="mini-stat-icon bg-pink"><i class="fa fa-user"></i></span>
-                                    <div class="mini-stat-info text-right text-dark">
-                                        <span class="counter text-dark">5210</span>
-                                        New Users
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-6 col-sm-6 col-lg-3">
-                                <div class="mini-stat clearfix bx-shadow bg-white">
-                                    <span class="mini-stat-icon bg-success"><i class="fa fa-eye"></i></span>
-                                    <div class="mini-stat-info text-right text-dark">
-                                        <span class="counter text-dark">20544</span>
-                                        Unique Visitors
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
 
-                        <div class="row">
-                            <!-- INBOX -->
-                            <div class="col-lg-4">
-                                <div class="panel panel-default">
-                                    <div class="panel-heading">
-                                        <h4 class="panel-title">Inbox</h4>
-                                    </div>
-                                    <div class="panel-body">
-                                        <div class="inbox-widget nicescroll mx-box">
-                                            <a href="#">
-                                                <div class="inbox-item">
-                                                    <div class="inbox-item-img"><img src="assets/images/users/avatar-1.jpg" class="img-circle" alt=""></div>
-                                                    <p class="inbox-item-author">Chadengle</p>
-                                                    <p class="inbox-item-text">Hey! there I'm available...</p>
-                                                    <p class="inbox-item-date">13:40 PM</p>
-                                                </div>
-                                            </a>
-                                            <a href="#">
-                                                <div class="inbox-item">
-                                                    <div class="inbox-item-img"><img src="assets/images/users/avatar-2.jpg" class="img-circle" alt=""></div>
-                                                    <p class="inbox-item-author">Tomaslau</p>
-                                                    <p class="inbox-item-text">I've finished it! See you so...</p>
-                                                    <p class="inbox-item-date">13:34 PM</p>
-                                                </div>
-                                            </a>
-                                            <a href="#">
-                                                <div class="inbox-item">
-                                                    <div class="inbox-item-img"><img src="assets/images/users/avatar-3.jpg" class="img-circle" alt=""></div>
-                                                    <p class="inbox-item-author">Stillnotdavid</p>
-                                                    <p class="inbox-item-text">This theme is awesome!</p>
-                                                    <p class="inbox-item-date">13:17 PM</p>
-                                                </div>
-                                            </a>
-                                            <a href="#">
-                                                <div class="inbox-item">
-                                                    <div class="inbox-item-img"><img src="assets/images/users/avatar-4.jpg" class="img-circle" alt=""></div>
-                                                    <p class="inbox-item-author">Kurafire</p>
-                                                    <p class="inbox-item-text">Nice to meet you</p>
-                                                    <p class="inbox-item-date">12:20 PM</p>
-                                                </div>
-                                            </a>
-                                            <a href="#">
-                                                <div class="inbox-item">
-                                                    <div class="inbox-item-img"><img src="assets/images/users/avatar-5.jpg" class="img-circle" alt=""></div>
-                                                    <p class="inbox-item-author">Shahedk</p>
-                                                    <p class="inbox-item-text">Hey! there I'm available...</p>
-                                                    <p class="inbox-item-date">10:15 AM</p>
-                                                </div>
-                                            </a>
-                                            <a href="#">
-                                                <div class="inbox-item">
-                                                    <div class="inbox-item-img"><img src="assets/images/users/avatar-6.jpg" class="img-circle" alt=""></div>
-                                                    <p class="inbox-item-author">Adhamdannaway</p>
-                                                    <p class="inbox-item-text">This theme is awesome!</p>
-                                                    <p class="inbox-item-date">9:56 AM</p>
-                                                </div>
-                                            </a>
-                                            <a href="#">
-                                                <div class="inbox-item">
-                                                    <div class="inbox-item-img"><img src="assets/images/users/avatar-8.jpg" class="img-circle" alt=""></div>
-                                                    <p class="inbox-item-author">Arashasghari</p>
-                                                    <p class="inbox-item-text">Hey! there I'm available...</p>
-                                                    <p class="inbox-item-date">10:15 AM</p>
-                                                </div>
-                                            </a>
-                                            <a href="#">
-                                                <div class="inbox-item">
-                                                    <div class="inbox-item-img"><img src="assets/images/users/avatar-9.jpg" class="img-circle" alt=""></div>
-                                                    <p class="inbox-item-author">Joshaustin</p>
-                                                    <p class="inbox-item-text">I've finished it! See you so...</p>
-                                                    <p class="inbox-item-date">9:56 AM</p>
-                                                </div>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div> <!-- end col -->
 
-                            <!-- CHAT -->
-                            <div class="col-lg-4">
+                        <!-- Vertical Steps Example -->
+                        <div class="row">
+                            <div class="col-md-12">
                                 <div class="panel panel-default">
                                     <div class="panel-heading"> 
-                                        <h3 class="panel-title">Chat</h3> 
+                                        <h3 class="panel-title">Vertical Steps Example</h3> 
                                     </div> 
                                     <div class="panel-body"> 
-                                        <div class="chat-conversation">
-                                            <ul class="conversation-list nicescroll">
-                                                <li class="clearfix">
-                                                    <div class="chat-avatar">
-                                                        <img src="assets/images/avatar-1.jpg" alt="male">
-                                                        <i>10:00</i>
+                                        <div id="wizard-vertical">
+                                            <h3>Account</h3>
+                                            <section>
+                                                <div class="form-group clearfix">
+                                                    <label class="col-lg-2 control-label" for="userName1">User name *</label>
+                                                    <div class="col-lg-10">
+                                                        <input class="form-control required" id="userName1" name="userName" type="text">
                                                     </div>
-                                                    <div class="conversation-text">
-                                                        <div class="ctext-wrap">
-                                                            <i>John Deo</i>
-                                                            <p>
-                                                                Hello!
-                                                            </p>
-                                                        </div>
-                                                    </div>
-                                                </li>
-                                                <li class="clearfix odd">
-                                                    <div class="chat-avatar">
-                                                        <img src="assets/images/users/avatar-5.jpg" alt="Female">
-                                                        <i>10:01</i>
-                                                    </div>
-                                                    <div class="conversation-text">
-                                                        <div class="ctext-wrap">
-                                                            <i>Smith</i>
-                                                            <p>
-                                                                Hi, How are you? What about our next meeting?
-                                                            </p>
-                                                        </div>
-                                                    </div>
-                                                </li>
-                                                <li class="clearfix">
-                                                    <div class="chat-avatar">
-                                                        <img src="assets/images/avatar-1.jpg" alt="male">
-                                                        <i>10:01</i>
-                                                    </div>
-                                                    <div class="conversation-text">
-                                                        <div class="ctext-wrap">
-                                                            <i>John Deo</i>
-                                                            <p>
-                                                                Yeah everything is fine
-                                                            </p>
-                                                        </div>
-                                                    </div>
-                                                </li>
-                                                <li class="clearfix odd">
-                                                    <div class="chat-avatar">
-                                                        <img src="assets/images/users/avatar-5.jpg" alt="male">
-                                                        <i>10:02</i>
-                                                    </div>
-                                                    <div class="conversation-text">
-                                                        <div class="ctext-wrap">
-                                                            <i>Smith</i>
-                                                            <p>
-                                                                Wow that's great
-                                                            </p>
-                                                        </div>
-                                                    </div>
-                                                </li>
-                                            </ul>
-                                            <div class="row">
-                                                <div class="col-sm-9 chat-inputbar">
-                                                    <input type="text" class="form-control chat-input" placeholder="Enter your text">
                                                 </div>
-                                                <div class="col-sm-3 chat-send">
-                                                    <button type="submit" class="btn btn-info btn-block waves-effect waves-light">Send</button>
+                                                <div class="form-group clearfix">
+                                                    <label class="col-lg-2 control-label" for="password1"> Password *</label>
+                                                    <div class="col-lg-10">
+                                                        <input id="password1" name="password" type="text" class="required form-control">
+                                                    </div>
                                                 </div>
-                                            </div>
-                                        </div>
-                                    </div> 
-                                </div>
-                            </div> <!-- end col-->
+
+                                                <div class="form-group clearfix">
+                                                    <label class="col-lg-2 control-label" for="confirm1">Confirm Password *</label>
+                                                    <div class="col-lg-10">
+                                                        <input id="confirm1" name="confirm" type="text" class="required form-control">
+                                                    </div>
+                                                </div>
+                                                <div class="form-group clearfix">
+                                                    <label class="col-lg-12 control-label">(*) Mandatory</label>
+                                                </div>
+                                            </section>
+                                            <h3>Profile</h3>
+                                            <section>
+                                                <div class="form-group clearfix">
+
+                                                    <label class="col-lg-2 control-label" for="name1"> First name *</label>
+                                                    <div class="col-lg-10">
+                                                        <input id="name1" name="name" type="text" class="required form-control">
+                                                    </div>
+                                                </div>
+                                                <div class="form-group clearfix">
+                                                    <label class="col-lg-2 control-label" for="surname1"> Last name *</label>
+                                                    <div class="col-lg-10">
+                                                        <input id="surname1" name="surname" type="text" class="required form-control">
+
+                                                    </div>
+                                                </div>
+
+                                                <div class="form-group clearfix">
+                                                    <label class="col-lg-2 control-label" for="email1">Email *</label>
+                                                    <div class="col-lg-10">
+                                                        <input id="email1" name="email" type="text" class="required email form-control">
+                                                    </div>
+                                                </div>
+
+                                                <div class="form-group clearfix">
+                                                    <label class="col-lg-2 control-label" for="address1">Address *</label>
+                                                    <div class="col-lg-10">
+                                                        <input id="address1" name="address" type="text" class="form-control">
+                                                    </div>
+                                                </div>
+
+                                                <div class="form-group clearfix">
+                                                    <label class="col-lg-12 control-label">(*) Mandatory</label>
+                                                </div>
+
+                                            </section>
+                                            <h3>Hints</h3>
+                                            <section>
+                                                <div class="form-group clearfix">
+                                                    <div class="col-lg-12">
+                                                        <ul>
+                                                            <li>Jonathan Smith </li>
+                                                            <li>Lab</li>
+                                                            <li>jonathan@smith.com</li>
+                                                            <li>Your city, Cityname</li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </section>
+                                            <h3>Finish</h3>
+                                            <section>
+                                                <div class="form-group clearfix">
+                                                    <div class="col-lg-12">
+                                                        <div class="checkbox checkbox-primary">
+                                                            <input id="checkbox-v" type="checkbox">
+                                                            <label for="checkbox-v">
+                                                                I agree with the Terms and Conditions.
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </section>
+                                        </div> <!-- End #wizard-vertical -->
+                                    </div>  <!-- End panel-body -->
+                                </div> <!-- End panel -->
+
+                            </div> <!-- end col -->
+
+                        </div> <!-- End row -->
 
 
-                            <!-- TODOs -->
-                            <div class="col-lg-4">
+
+                        <!-- Wizard with Validation -->
+                        <div class="row">
+                            <div class="col-md-12">
                                 <div class="panel panel-default">
                                     <div class="panel-heading"> 
-                                        <h3 class="panel-title">Todo</h3> 
+                                        <h3 class="panel-title">Wizard with Validation</h3> 
                                     </div> 
-                                    <div class="panel-body todoapp"> 
-                                        <div class="row">
-                                            <div class="col-sm-6">
-                                                <h4 id="todo-message"><span id="todo-remaining"></span> of <span id="todo-total"></span> remaining</h4> 
-                                            </div>
-                                            <div class="col-sm-6">
-                                                <a href="#" class="pull-right btn btn-primary btn-sm waves-effect waves-light" id="btn-archive">Archive</a>
-                                            </div>
-                                        </div>
+                                    <div class="panel-body"> 
+                                        <form id="wizard-validation-form" action="#">
+                                            <div>
+                                                <h3>Step 1</h3>
+                                                <section>
+                                                    <div class="form-group clearfix">
+                                                        <label class="col-lg-2 control-label" for="userName2">User name </label>
+                                                        <div class="col-lg-10">
+                                                            <input class="form-control" id="userName2" name="userName" type="text">
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group clearfix">
+                                                        <label class="col-lg-2 control-label" for="password2"> Password *</label>
+                                                        <div class="col-lg-10">
+                                                            <input id="password2" name="password" type="text" class="required form-control">
 
-                                        <ul class="list-group no-margn nicescroll todo-list" style="max-height: 288px" id="todo-list"></ul>
+                                                        </div>
+                                                    </div>
 
-                                         <form name="todo-form" id="todo-form" role="form" class="m-t-20">
-                                            <div class="row">
-                                                <div class="col-sm-9 todo-inputbar">
-                                                    <input type="text" id="todo-input-text" name="todo-input-text" class="form-control" placeholder="Add new todo">
-                                                </div>
-                                                <div class="col-sm-3 todo-send">
-                                                    <button class="btn-primary btn-block btn waves-effect waves-light" type="button" id="todo-btn-submit">Add</button>
-                                                </div>
+                                                    <div class="form-group clearfix">
+                                                        <label class="col-lg-2 control-label" for="confirm2">Confirm Password *</label>
+                                                        <div class="col-lg-10">
+                                                            <input id="confirm2" name="confirm" type="text" class="required form-control">
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group clearfix">
+                                                        <label class="col-lg-12 control-label">(*) Mandatory</label>
+                                                    </div>
+                                                </section>
+                                                <h3>Step 2</h3>
+                                                <section>
+
+                                                    <div class="form-group clearfix">
+                                                        <label class="col-lg-2 control-label" for="name2"> First name *</label>
+                                                        <div class="col-lg-10">
+                                                            <input id="name2" name="name" type="text" class="required form-control">
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group clearfix">
+                                                        <label class="col-lg-2 control-label" for="surname2"> Last name *</label>
+                                                        <div class="col-lg-10">
+                                                            <input id="surname2" name="surname" type="text" class="required form-control">
+
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="form-group clearfix">
+                                                        <label class="col-lg-2 control-label" for="email2">Email *</label>
+                                                        <div class="col-lg-10">
+                                                            <input id="email2" name="email" type="text" class="required email form-control">
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="form-group clearfix">
+                                                        <label class="col-lg-2 control-label" for="address2">Address </label>
+                                                        <div class="col-lg-10">
+                                                            <input id="address2" name="address" type="text" class="form-control">
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="form-group clearfix">
+                                                        <label class="col-lg-12 control-label">(*) Mandatory</label>
+                                                    </div>
+
+                                                </section>
+                                                <h3>Step 3</h3>
+                                                <section>
+                                                    <div class="form-group clearfix">
+                                                        <div class="col-lg-12">
+                                                            <ul class="list-unstyled w-list">
+                                                                <li>First Name : Jonathan </li>
+                                                                <li>Last Name : Smith </li>
+                                                                <li>Emial: jonathan@smith.com</li>
+                                                                <li>Address: 123 Your City, Cityname. </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </section>
+                                                <h3>Step Final</h3>
+                                                <section>
+                                                    <div class="form-group clearfix">
+                                                        <div class="col-lg-12">
+                                                            <input id="acceptTerms-2" name="acceptTerms2" type="checkbox" class="required">
+                                                            <label for="acceptTerms-2">I agree with the Terms and Conditions.</label>
+                                                        </div>
+                                                    </div>
+
+                                                </section>
                                             </div>
-                                        </form> 
-                                    </div> 
-                                </div>
+                                        </form>
+                                    </div>  <!-- End panel-body -->
+                                </div> <!-- End panel -->
+
                             </div> <!-- end col -->
-                        </div> <!-- end row -->
+
+                        </div> <!-- End row -->
 
                     </div> <!-- container -->
                                
@@ -786,21 +790,20 @@
                             </a>
                             <span class="clearfix"></span>
                         </li>
-                    </ul>  
+                    </ul>
                 </div>
             </div>
             <!-- /Right-bar -->
 
+
         </div>
         <!-- END wrapper -->
 
-
-    
         <script>
             var resizefunc = [];
         </script>
 
-        <!-- jQuery  -->
+        <!-- Main  -->
         <script src="assets/js/jquery.min.js"></script>
         <script src="assets/js/bootstrap.min.js"></script>
         <script src="assets/js/detect.js"></script>
@@ -813,51 +816,19 @@
         <script src="assets/js/jquery.scrollTo.min.js"></script>
 
         <script src="assets/js/jquery.app.js"></script>
-        
-        <!-- jQuery  -->
-        <script src="assets/plugins/moment/moment.js"></script>
-        
-        <!-- jQuery  -->
-        <script src="assets/plugins/waypoints/lib/jquery.waypoints.js"></script>
-        <script src="assets/plugins/counterup/jquery.counterup.min.js"></script>
-        
-        <!-- jQuery  -->
-        <script src="assets/plugins/sweetalert/dist/sweetalert.min.js"></script>
-        
-        
-        <!-- flot Chart -->
-        <script src="assets/plugins/flot-chart/jquery.flot.js"></script>
-        <script src="assets/plugins/flot-chart/jquery.flot.time.js"></script>
-        <script src="assets/plugins/flot-chart/jquery.flot.tooltip.min.js"></script>
-        <script src="assets/plugins/flot-chart/jquery.flot.resize.js"></script>
-        <script src="assets/plugins/flot-chart/jquery.flot.pie.js"></script>
-        <script src="assets/plugins/flot-chart/jquery.flot.selection.js"></script>
-        <script src="assets/plugins/flot-chart/jquery.flot.stack.js"></script>
-        <script src="assets/plugins/flot-chart/jquery.flot.crosshair.js"></script>
 
-        <!-- jQuery  -->
-        <script src="assets/pages/jquery.todo.js"></script>
-        
-        <!-- jQuery  -->
-        <script src="assets/pages/jquery.chat.js"></script>
-        
-        <!-- jQuery  -->
-        <script src="assets/pages/jquery.dashboard.js"></script>
-        
-        <script type="text/javascript">
-            /* ==============================================
-            Counter Up
-            =============================================== */
-            jQuery(document).ready(function($) {
-                $('.counter').counterUp({
-                    delay: 100,
-                    time: 1200
-                });
-            });
-        </script>
+        <!--Form Validation-->
+        <script src="assets/plugins/bootstrapvalidator/dist/js/bootstrapValidator.js" type="text/javascript"></script>
 
-    
-    </body>
+        <!--Form Wizard-->
+        <script src="assets/plugins/jquery.steps/build/jquery.steps.min.js" type="text/javascript"></script>
+        <script type="text/javascript" src="assets/plugins/jquery-validation/dist/jquery.validate.min.js"></script>
 
-<!-- Licensed to naveeninja/dark_2/ by Themeforest/3.x [XR&CO'2013], Sat, 23 Apr 2016 11:52:50 GMT -->
+        <!--wizard initialization-->
+        <script src="assets/pages/jquery.wizard-init.js" type="text/javascript"></script>
+
+	
+	</body>
+
+<!-- Licensed to naveeninja/dark_2/form-wizard.html by Themeforest/3.x [XR&CO'2013], Sat, 23 Apr 2016 11:54:37 GMT -->
 </html>
