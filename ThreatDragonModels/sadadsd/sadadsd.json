@@ -1,0 +1,27 @@
+{
+  "summary": {
+    "title": "sadadsd",
+    "owner": "adsdsdsad",
+    "description": "sdasdasdsadsa"
+  },
+  "detail": {
+    "contributors": [
+      {
+        "name": "dsdasdsad"
+      }
+    ],
+    "diagrams": [
+      {
+        "title": "yes",
+        "thumbnail": "./public/content/images/thumbnail.jpg",
+        "id": 0
+      },
+      {
+        "title": "sadasdsadas",
+        "thumbnail": "./public/content/images/thumbnail.jpg",
+        "id": 1
+      }
+    ],
+    "reviewer": "sadasassaddasdas"
+  }
+}
